@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Owners List</h1>
+
+    {% if owner_list %}
+    <ul>
+
+      {% for owner in owner_list %}
+      <li>
+        <a href="{{ owner.get_absolute_url }}">{{ owner.last_name }}</a>
+        {{ owner.first_name }} {{owner.phone}}
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no owners.</p>
+    {% endif %} 
+{% endblock %}

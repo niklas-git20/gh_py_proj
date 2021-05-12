@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Apartments List</h1>
+
+    {% if apart_list %}
+    <ul>
+
+      {% for apart in apart_list %}
+      <li>
+        <a href="{{ apart.get_absolute_url }}">{{ apart.nbr }}</a>
+        {{ apart.descr }} ({{apart.owner}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no apartments.</p>
+    {% endif %} 
+{% endblock %}

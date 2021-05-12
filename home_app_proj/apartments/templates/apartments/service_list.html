@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+ 
+
+<p></p>
+    <h1>Ordered services</h1>
+
+    {% if service_list %}
+    <ul>
+
+      {% for service in service_list %}
+      <p><strong>Proffesion:</strong> {{ service.prof_req }}</p>
+      <p><strong>Ordered date:</strong> {{ service.date_req }}</p>
+      <p><strong>Client:</strong> {{ service.client }}</p>
+      {% endfor %}
+      </ul>
+
+    {% else %}
+      <p>There are no services ordered</p>
+    {% endif %}
+{% endblock %}

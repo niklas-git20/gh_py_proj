@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Home</h1>
+
+  <p>Welcome to <em>Home app</em>, basic Django website</p>
+
+<h2>Dynamic content</h2>
+
+  <p>The home has the following record counts:</p>
+  <ul>
+    <li><strong>Apartments:</strong> {{ num_aparts }}</li>
+    <li><strong>Owners:</strong> {{ num_owners }}</li>
+  </ul>
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h1>Accrual calculation</h1>
+    <p>Client: {{user.get_username}}</p>   
+   
+
+<p></p>
+    <h1>Balances</h1>
+
+    {% if accrual_list %}
+    <ul>
+
+      {% for accrual in accrual_list %}
+      <p><strong>Apartment:</strong> {{ accrual.nbr }}</p>
+      <p><strong>Balance:</strong> {{ accrual.balance }}</p>
+      <p><strong>Accrued:</strong> {{ accrual.accrued }}</p>
+      
+      {% endfor %}
+      </ul>
+
+    {% else %}
+      <p>There are no balances </p>
+    {% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h1>Request of services</h1>
+    <p>Client: {{user.get_username}}</p>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{ form.as_p }}
+        </table>
+        <input type="submit" value="Submit" />
+    </form>
+
+
+
+
+{% endblock %}

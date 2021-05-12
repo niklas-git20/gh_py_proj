@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+  <h1>Number: {{ apart.nbr }}</h1>
+
+  <p><strong>Owner:</strong> <a href="">{{ apart.owner }}</a></p> 
+  <!-- owner detail link not yet defined -->
+  <p><strong>Description:</strong> {{ apart.descr }}</p>
+  <p><strong>Summary:</strong> {{ apart.summary }}</p>  
+  <p><strong>Layout:</strong> {{ apart.layout }}</p>
+  <img src="{{apart.layout.url}}">
+  
+  
+  
+{% endblock %}
